@@ -4,7 +4,6 @@
 
 ## Members
 
-=====
 +Stefan Coica - Team Coordinator, Developer
 +Connor Bowyer - Requirements Coordinator, Developer
 +Joseph Caradonna - Development Coordinator, Developer
