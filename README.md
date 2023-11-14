@@ -1,4 +1,4 @@
-# Accessible Chess
+# Accessible Chess Project - CSI 3380
 
 ## Team 4 Members
 
