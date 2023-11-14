@@ -1,8 +1,6 @@
-# chess-3380
+# Accessible Chess
 
-## Team 4
-
-## Members
+## Team 4 Members
 
 - Stefan Coica - Team Coordinator, Developer
 - Connor Bowyer - Requirements Coordinator, Developer
