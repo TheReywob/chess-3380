@@ -194,13 +194,10 @@ public class ChessGame {
         System.out.println("----------");
 
         System.out.println("Special Rules:");
-
+        System.out.println("1. Promoting a pawn occurs when the pawn reaches the other side of the board. You can choose for it to become any other piece.");
+        System.out.println("2. En Passant occurs when a pawn moves out 2 squares on its first move and lands to the side of an opponents pawn. The opponent can capture your pawn if is passed in this way.");
+        System.out.println("3. Castling: this allows the king to get to safety. It must be the kings first move, it must be the rooks first move, there cannot be any pieces between the king and the rook, and the king may not be in check or pass through check.");
         System.out.println("----------");
-        System.out.println("Special Rules:");
-
-
-        System.out.println("------------------------------");
-
         Scanner scanner = new Scanner(System.in);
 
         char userInput = scanner.next().charAt(0);
