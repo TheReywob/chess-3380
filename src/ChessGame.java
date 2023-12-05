@@ -4,32 +4,7 @@ public class ChessGame {
     private static char[][] board;
 
     public static void main(String[] args) {
-        initializeBoard();
-        displayBoard();
-
-        Scanner scanner = new Scanner(System.in);
-
-        while (true) {
-            System.out.println("Player 1's turn (White)");
-            makeMove('W');
-
-            displayBoard();
-            if (isGameOver()) {
-                System.out.println("Player 1 (White) wins!");
-                break;
-            }
-
-            System.out.println("Player 2's turn (Black)");
-            makeMove('B');
-
-            displayBoard();
-            if (isGameOver()) {
-                System.out.println("Player 2 (Black) wins!");
-                break;
-            }
-        }
-
-        scanner.close();
+        initializeMainMenu();
     }
 
     private static void initializeBoard() {
@@ -56,9 +31,34 @@ public class ChessGame {
             System.out.println(8 - i);
         }
         System.out.println("  a b c d e f g h");
+
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Player 1's turn (White)");
+            makeMove('W');
+
+            displayBoard();
+            if (isGameOver()) {
+                System.out.println("Player 1 (White) wins!");
+                break;
+            }
+
+            System.out.println("Player 2's turn (Black)");
+            makeMove('B');
+
+            displayBoard();
+            if (isGameOver()) {
+                System.out.println("Player 2 (Black) wins!");
+                break;
+            }
+        }
+
+        scanner.close();
+        
     }
 
     private static void makeMove(char player) {
+
         Scanner scanner = new Scanner(System.in);
         int startX, startY, endX, endY;
 
@@ -73,6 +73,28 @@ public class ChessGame {
             } else {
                 System.out.println("Invalid move. Try again.");
             }
+
+            while (true) {
+                System.out.println("Player 1's turn (White)");
+                makeMove('W');
+    
+                displayBoard();
+                if (isGameOver()) {
+                    System.out.println("Player 1 (White) wins!");
+                    break;
+                }
+    
+                System.out.println("Player 2's turn (Black)");
+                makeMove('B');
+    
+                displayBoard();
+                if (isGameOver()) {
+                    System.out.println("Player 2 (Black) wins!");
+                    break;
+                }
+            }
+    
+            scanner.close();
         }
 
         while (true) {
@@ -110,5 +132,69 @@ public class ChessGame {
     private static boolean isGameOver() {
         // Add game over conditions if needed
         return false;
+    }
+
+    // main menu
+    private static void initializeMainMenu() {
+        System.out.println("Welcome to Team 4's Chess Game");
+        System.out.println("------------------------------");
+        System.out.println("Press 1 to view the rules.");
+        System.out.println("Press 2 to change the settings.");
+        System.out.println("Press 3 to start the game.");
+        System.out.println("------------------------------");
+
+        Scanner scanner = new Scanner(System.in);
+
+        char userInput = scanner.next().charAt(0);
+
+        if (userInput =='1') {
+            initializeRules();
+        } else if(userInput =='2') {
+            initializeSettings();
+        } else if(userInput =='3') {
+            initializeBoard();
+            displayBoard();
+        }
+
+        scanner.close();
+    }
+
+    // settings menu
+    private static void initializeSettings() {
+        System.out.println("Settings - press 1 to exit");
+        System.out.println("------------------------------");
+        System.out.println("Press 1 to view the rules.");
+        System.out.println("Press 2 to change the settings.");
+        System.out.println("Press 3 to start the game.");
+        System.out.println("------------------------------");
+
+        Scanner scanner = new Scanner(System.in);
+
+        char userInput = scanner.next().charAt(0);
+
+        if (userInput =='1') {
+            initializeMainMenu();
+        }
+
+
+    }
+
+    // rules menu
+    private static void initializeRules() {
+        System.out.println("Rules - press 1 to exit");
+        System.out.println("------------------------------");
+        System.out.println("1. ");
+        System.out.println("2. ");
+        System.out.println("3. ");
+        System.out.println("------------------------------");
+
+        Scanner scanner = new Scanner(System.in);
+
+        char userInput = scanner.next().charAt(0);
+
+        if (userInput =='1') {
+            initializeMainMenu();
+        }
+
     }
 }
