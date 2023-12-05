@@ -161,11 +161,10 @@ public class ChessGame {
 
     // settings menu
     private static void initializeSettings() {
-        System.out.println("Settings - press 1 to exit");
         System.out.println("------------------------------");
-        System.out.println("Press 1 to view the rules.");
-        System.out.println("Press 2 to change the settings.");
-        System.out.println("Press 3 to start the game.");
+        System.out.println("Settings - press 1 to exit:");
+        System.out.println("------------------------------");
+        System.out.println("No settings yet");
         System.out.println("------------------------------");
 
         Scanner scanner = new Scanner(System.in);
@@ -179,13 +178,27 @@ public class ChessGame {
 
     }
 
-    // rules menu
+    // rules menu, rules modified from https://www.chess.com/learn-how-to-play-chess
     private static void initializeRules() {
+        System.out.println("------------------------------");
         System.out.println("Rules - press 1 to exit");
         System.out.println("------------------------------");
-        System.out.println("1. ");
-        System.out.println("2. ");
-        System.out.println("3. ");
+
+        System.out.println("Moving Pieces:");
+        System.out.println("1. The king can move one square in any direction: up, down, to the sides, and diagonally.");
+        System.out.println("2. The queen can move in one straight direction as far as possible without moving through any of her own pieces.");
+        System.out.println("3. The rook can move forward, backwards, and to the sides as far as it wants.");
+        System.out.println("4. The bishop can move diagonally as far as it wants. It must stay on the color it started on.");
+        System.out.println("5. The knight can move in an L shape 2 squares out and one over in the direction you choose.");
+        System.out.println("6. The pawn can move forward one square at a time except for its first move where it can move 2 squares. Pawns can only capture one square diagonally in front of them.");
+        System.out.println("----------");
+
+        System.out.println("Special Rules:");
+
+        System.out.println("----------");
+        System.out.println("Special Rules:");
+
+
         System.out.println("------------------------------");
 
         Scanner scanner = new Scanner(System.in);
